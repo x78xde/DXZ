@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra | DXZ STUDIOS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Logo de DXZ STUDIOS">
+            </div>
+            <ul>
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#informacion" class="nav-link">Información</a></li>
+                <li><a href="tienda.html" class="nav-link">Tienda</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="redes-sociales.html" class="nav-link">Redes Sociales</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="compra">
+            <div class="compra-content">
+                <h2>Formulario de Compra</h2>
+                <p>Completa el formulario para comprar el producto. Tu información será utilizada para activar el producto en el servidor.</p>
+                
+                <form action="procesar-compra.php" method="post">
+                    <fieldset>
+                        <legend>Detalles del Producto</legend>
+                        <p><strong>Producto:</strong> Rango VIP</p>
+                        <p><strong>Precio:</strong> $10.00</p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Información del Usuario</legend>
+                        <label for="nombre-discord">Nombre en Discord:</label>
+                        <input type="text" id="nombre-discord" name="nombre_discord" required>
+
+                        <label for="nombre-minecraft">Nombre de Minecraft:</label>
+                        <input type="text" id="nombre-minecraft" name="nombre_minecraft" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Detalles de Pago</legend>
+                        <!-- Aquí puedes integrar un sistema de pago. Ejemplo: PayPal, Stripe, etc. -->
+                        <p>Realiza tu pago utilizando el método preferido. Puedes usar el botón a continuación para pagar.</p>
+                        <button type="submit" class="btn comprar-btn">Pagar y Comprar</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DXZ STUDIOS. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

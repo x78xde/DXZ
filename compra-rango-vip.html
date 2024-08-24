@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra Rango VIP | DXZ STUDIOS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="sprites/imagenes/Sin título(1).png" alt="Logo de DXZ STUDIOS">
+            </div>
+            <ul>
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#informacion" class="nav-link">Información</a></li>
+                <li><a href="index.html#tienda" class="nav-link">Tienda</a></li>
+                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="index.html#redes-sociales" class="nav-link">Redes Sociales</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="compra">
+            <div class="compra-content">
+                <h2>Compra Rango VIP</h2>
+                <p>Completa el siguiente formulario para comprar el Rango VIP.</p>
+                <form>
+                    <fieldset>
+                        <legend>Información de Compra</legend>
+                        <label for="nombre-discord">Nombre en Discord:</label>
+                        <input type="text" id="nombre-discord" name="nombre-discord" required placeholder="Tu nombre en Discord">
+
+                        <label for="nombre-minecraft">Nombre en Minecraft:</label>
+                        <input type="text" id="nombre-minecraft" name="nombre-minecraft" required placeholder="Tu nombre en Minecraft">
+
+                        <!-- PayPal Button -->
+                        <div id="paypal-button-container-vip"></div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DXZ STUDIOS. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"></script>
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '10.00' // Precio del Rango VIP
+                        },
+                        description: 'Rango VIP'
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transacción completada por ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container-vip');
+    </script>
+</body>
+</html>

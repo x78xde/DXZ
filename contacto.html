@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | DXZ STUDIOS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="sprites/imagenes/Sin título(1).png" alt="Logo de DXZ STUDIOS">
+            </div>
+            <ul>
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#informacion" class="nav-link">Información</a></li>
+                <li><a href="index.html#tienda" class="nav-link">Tienda</a></li>
+                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="index.html#redes-sociales" class="nav-link">Redes Sociales</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contacto">
+            <div class="contacto-content">
+                <h2>Contacto</h2>
+                <p>Para cualquier consulta, por favor, envíanos un mensaje a través del siguiente formulario. Nos pondremos en contacto contigo a la mayor brevedad posible.</p>
+                <form action="enviar-contacto.php" method="post">
+                    <fieldset>
+                        <legend>Información de Contacto</legend>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Tu email">
+
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Tu mensaje"></textarea>
+
+                        <button type="submit" class="btn">Enviar</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DXZ STUDIOS. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
